@@ -1,1 +1,0 @@
-#Questo script cancella i log.
