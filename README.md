@@ -1,2 +1,1 @@
-# formazione_sou 2025
-
+# Formazione sou 2025
