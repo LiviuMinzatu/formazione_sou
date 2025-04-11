@@ -1,6 +1,8 @@
-Codice1.sh:
+# Descrizione
 
-Il codice fa il confronto tra gli UID degli utenti, variabile per gli user e 0 di default per root.
+
+Codice1.sh:
+il codice fa il confronto tra gli UID degli utenti, variabile per gli user e 0 di default per root.
 In base alla struttura di controllo viene stampato se sei o no root.
 
 
