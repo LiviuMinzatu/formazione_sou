@@ -1,0 +1,24 @@
+Vagrant.configure("2") do |config|  # Inizia la configurazione di Vagrant per la versione 2
+
+  config.vm.box = "ubuntu/bionic64"  # Imposta l'immagine di base della VM su Ubuntu 18.04 (bionic64)
+
+  (1..2).each do |i|  # Ciclo per creare due nodi (node1 e node2)
+    config.vm.define "node#{i}" do |node|  # Definisce la configurazione per ciascun nodo
+
+      # Configurazione delle impostazioni di rete e provider
+      node.vm.hostname = "node#{i}"  # Imposta il nome host della VM (node1 o node2)
+      node.vm.network "private_network", ip: "192.168.56.1#{i}"  # Assegna un IP privato univoco a ciascun nodo
+      node.vm.provider "virtualbox" do |vb|  # Configura VirtualBox come provider
+        vb.memory = 512  # Assegna 512 MB di memoria a ciascun nodo
+      end
+
+      # Provisioning per l'installazione di software e avvio di servizi
+      node.vm.provision "shell", inline: <<-SHELL
+        apt-get update  # Esegue l'aggiornamento dei pacchetti
+        apt-get install -y docker.io python3 python3-pip  # Installa Docker, Python3 e pip
+        systemctl start docker  # Avvia il servizio Docker
+        systemctl enable docker  # Imposta Docker per l'avvio automatico al boot
+      SHELL
+    end
+  end
+end
