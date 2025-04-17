@@ -1,5 +1,5 @@
 .DS_Store
 *.log
 .swp
-*.vagrant/
+.vagrant/
 minutiCommentati.py
