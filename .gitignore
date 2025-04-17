@@ -2,4 +2,5 @@
 *.log
 .swp
 /.vagrant
+.*
 minutiCommentati.py
