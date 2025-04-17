@@ -18,7 +18,7 @@ Questo script permette di selezionare una cartella e in automatico, rimuove tutt
 
 1. Lo script chiede all’utente di inserire un percorso di directory (PATH).
 2. Verifica che la directory esista effettivamente.
-3. Utilizza il comando 'find' per cercare e cancellare tutti i file più piccoli di 10 KB.
+3. Utilizza il comando `find` per cercare e cancellare tutti i file più piccoli di 10 KB.
 4. Mostra i file eliminati uno per uno.
 5. Alla fine stampa un messaggio di conferma ✅
 
