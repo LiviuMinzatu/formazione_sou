@@ -1,10 +1,10 @@
-# ⏳ progress-bar2.sh
+# progress-bar2.sh
 
 Uno script Bash che simula una **barra di progresso** durante l'esecuzione di un processo lungo. Utile per fornire feedback visivo all'utente mentre uno script è in attesa.
 
 ---
 
-## 📄 Descrizione
+## Descrizione
 
 Questo script:
 
@@ -16,7 +16,7 @@ Questo script:
 
 ---
 
-## 📜 Funzionamento
+## Funzionamento
 
 1. La barra stampa un punto ogni secondo (`interval=1`)
 2. Il processo "lungo" dura 10 secondi (`long_interval=10`)
@@ -25,7 +25,7 @@ Questo script:
 
 ---
 
-## ▶️ Esecuzione
+## Esecuzione
 
 Assicurati di usare **`bash`** per eseguire lo script (non `sh`):
 

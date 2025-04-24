@@ -1,10 +1,10 @@
-# 🔄 Exit Status Script
+# Exit Status Script
 
 Questo semplice script Bash serve per mostrare **il codice di ritorno (exit status)** dei comandi eseguiti. È un ottimo esercizio per capire come Bash gestisce il successo o il fallimento dei comandi.
 
 ---
 
-## 🧪 Cosa fa lo script
+## Cosa fa lo script
 
 1. Esegue il comando `echo hello`
    - Stampa `hello`
@@ -17,7 +17,7 @@ Questo semplice script Bash serve per mostrare **il codice di ritorno (exit stat
 
 ---
 
-## ⚙️ Esecuzione
+## Esecuzione
 
 Per eseguire lo script:
 

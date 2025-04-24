@@ -1,10 +1,10 @@
-# 📦 Script Parametri Bash
+# Script Parametri Bash
 
 Questo script Bash mostra come leggere e gestire **parametri da linea di comando**, verificandone la presenza e stampandone i valori. È utile per comprendere come interagire con gli argomenti in uno script.
 
 ---
 
-## 📋 Cosa fa lo script
+## Cosa fa lo script
 
 1. Stampa il **nome dello script** con e senza percorso (`$0`, `basename $0`)
 2. Verifica e stampa i primi **dieci parametri** (`$1`, `$2`, ..., `${10}`)
@@ -14,7 +14,7 @@ Questo script Bash mostra come leggere e gestire **parametri da linea di comando
 
 ---
 
-## 🔧 Esecuzione
+## Esecuzione
 
 Per avviare lo script, passa i parametri direttamente da terminale:
 

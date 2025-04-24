@@ -4,7 +4,7 @@ Questo semplice script Bash serve per **pulire i file di log** più comuni nel s
 
 ---
 
-## 📁 Cosa fa lo script
+## Cosa fa lo script
 
 1. Si sposta nella directory `/var/log`
 2. Svuota i contenuti dei file `messages` e `wtmp` (li azzera)
@@ -12,14 +12,14 @@ Questo semplice script Bash serve per **pulire i file di log** più comuni nel s
 
 ---
 
-## ⚠️ Attenzione
+## Attenzione
 
 - Lo script **deve essere eseguito come `root`**, altrimenti non avrà i permessi per modificare i file di log.
 - Questo script **non elimina i file**, ma ne svuota il contenuto.
 
 ---
 
-## 💻 Esecuzione
+## Esecuzione
 
 Apri un terminale ed esegui:
 
