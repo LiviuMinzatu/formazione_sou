@@ -1,4 +1,4 @@
-# 🐳 Migrazione periodica di un container Docker tra due nodi Vagrant
+# 🐳 Migrazione periodica di un container Docker su due nodi Vagrant
 
 Questo progetto dimostra come eseguire la **migrazione automatica di un container Docker** tra due macchine virtuali (nodo1 e nodo2) create con **Vagrant**. Il container utilizzato è `ealen/echo-server`, un semplice server HTTP di test.
 
@@ -21,6 +21,6 @@ Questo progetto dimostra come eseguire la **migrazione automatica di un containe
 
 1. Clona la repository:
    ```bash
-   git clone https://github.com/tuo-username/nome-repo.git
-   cd nome-repo
+   git clone https://github.com/liviuminzatu/formazione_sou.git
+   
 
