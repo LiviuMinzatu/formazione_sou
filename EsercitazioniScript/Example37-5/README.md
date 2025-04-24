@@ -1,10 +1,10 @@
-# 🏠 Array Associativi in Bash: Rubrica Indirizzi
+# Array Associativi in Bash: Rubrica Indirizzi
 
 Questo script dimostra l'uso degli **array associativi** in Bash tramite una semplice rubrica che associa nomi a indirizzi.
 
 ---
 
-## 📄 Descrizione
+## Descrizione
 
 Lo script crea un array associativo `address` e assegna ad alcuni nomi i rispettivi indirizzi. Poi:
 
@@ -13,7 +13,7 @@ Lo script crea un array associativo `address` e assegna ad alcuni nomi i rispett
 
 ---
 
-## 🧠 Concetti chiave
+## Concetti chiave
 
 | Concetto                  | Esempio                              |
 |---------------------------|--------------------------------------|
@@ -24,7 +24,7 @@ Lo script crea un array associativo `address` e assegna ad alcuni nomi i rispett
 
 ---
 
-## ▶️ Esecuzione
+## Esecuzione
 
 Assicurati di usare **Bash 4.0 o superiore**, perché gli array associativi **non sono supportati** da versioni più vecchie.
 

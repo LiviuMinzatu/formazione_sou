@@ -1,4 +1,4 @@
-# 🎓 Formazione SOURCESENSE Academy
+# Formazione SOURCESENSE Academy
 
 Benvenuto nella mia repository dedicata al mio percorso di formazione con **SOURCESENSE**!
 
@@ -6,7 +6,7 @@ Benvenuto nella mia repository dedicata al mio percorso di formazione con **SOUR
 
 ---
 
-## 📂 Cosa contiene questa repo?
+## Cosa contiene questa repo?
 
 - **Esercizi pratici**
 - **Script Bash e automazioni**
@@ -14,7 +14,7 @@ Benvenuto nella mia repository dedicata al mio percorso di formazione con **SOUR
 
 ---
 
-## 🔧 Tecnologie & strumenti
+## Tecnologie & strumenti
 
 Questa repo si basa principalmente su:
 
@@ -26,7 +26,7 @@ Questa repo si basa principalmente su:
 
 ---
 
-## 🎯 Obiettivi del progetto
+## Obiettivi del progetto
 
 - Documentare il mio percorso formativo
 - Consolidare le conoscenze acquisite
@@ -35,7 +35,7 @@ Questa repo si basa principalmente su:
 
 ---
 
-## 📖 Come utilizzare questa repo
+## Come utilizzare questa repo
 
 1. Clona il repository:
 

@@ -1,10 +1,10 @@
-# 🧪 Script sulle variabili
+# Script sulle variabili
 
 Questo script Bash mostra come utilizzare le **variabili "nude" (non dichiarate esplicitamente con tipo)**, ed è un ottimo esempio per imparare le basi delle variabili in shell scripting.
 
 ---
 
-## ⚙️ Cosa fa lo script
+## Cosa fa lo script
 
 1. Assegna e stampa il valore di una variabile `a`
 2. Riassegna un nuovo valore a `a` tramite un'espressione aritmetica
@@ -22,7 +22,7 @@ Questo script Bash mostra come utilizzare le **variabili "nude" (non dichiarate 
 
 ---
 
-## ▶️ Esecuzione
+## Esecuzione
 
 Nel terminale, rendi eseguibile lo script e avvialo:
 
