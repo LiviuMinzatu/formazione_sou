@@ -41,7 +41,15 @@ fi
 # Sposta la cartella/file nella cartella di destinazione
 mv "$src_path" "$dest_folder"
 
-# 5. Leggi/aggiorna il contatore per il giorno
+# 5. Aggiungi un file .gitkeep se la cartella è vuota
+if [ -d "$dest_folder/$(basename "$src_path")" ] && [ "$(ls -A "$dest_folder/$(basename "$src_path")")" ]; then
+  echo "La cartella non è vuota."
+else
+  echo "La cartella è vuota, aggiungendo .gitkeep per forzare il caricamento su Git."
+  touch "$dest_folder/$(basename "$src_path")/.gitkeep"
+fi
+
+# 6. Leggi/aggiorna il contatore per il giorno
 commit_file="$repo_root/.last_commit_count"
 if [ ! -f "$commit_file" ]; then
   touch "$commit_file"
@@ -59,7 +67,7 @@ grep -v "^$giorno:" "$commit_file" > "$commit_file.tmp"
 echo "$giorno:$last_number" >> "$commit_file.tmp"
 mv "$commit_file.tmp" "$commit_file"
 
-# 6. Crea il messaggio di commit
+# 7. Crea il messaggio di commit
 commit_msg="${giorno}Update${last_number}"
 echo "Il messaggio del commit sarà: \"$commit_msg\""
 read -p "Procedere? (s/n): " conferma_commit
@@ -68,11 +76,15 @@ if [ "$conferma_commit" != "s" ]; then
   exit 0
 fi
 
-# 7. Aggiungi, committa e pusha nella repo
+# 8. Aggiungi, committa e pusha nella repo
 cd "$repo_root" || exit
 git add .
 git commit -m "$commit_msg"
+
+# 9. Esegui git push (senza URL specificato)
+echo "Pushing changes to GitHub..."
 git push
 
-# 8. Fine
-echo "✅ Commit eseguito con messaggio: $commit_msg"
+# 10. Fine
+echo "✅ Commit e push eseguiti con messaggio: $commit_msg"
+
