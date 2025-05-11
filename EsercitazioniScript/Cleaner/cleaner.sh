@@ -17,7 +17,8 @@ fi
 # -exec cancella ogni file trovato corrispondente
 # {}  viene sostituito con il nome del file trovato
 # \;  viene terminato con -exec
-find "$directory" -type f -size -10k -exec rm -v {} \;
+find "$directory" -type f -size -40k -exec rm -v {} \;
+#Modifico il valore ogni volta 
 
 # Messaggio di output per informare l'utente dello stato finale (l'esito)
 echo "File più piccoli di 10 KB eliminati con successo."
