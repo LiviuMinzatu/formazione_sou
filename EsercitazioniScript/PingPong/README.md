@@ -1,32 +1,32 @@
 # Docker Container Migrator
 
-Uno script Python che **avvia e arresta automaticamente** un container Docker su due nodi Vagrant (`node1` e `node2`) **in base alla parità del minuto** attuale. È utile per simulare un comportamento di "failover" o migrazione periodica in un ambiente distribuito.
+A Python script that **automatically starts and stops** a Docker container on two Vagrant nodes (`node1` and `node2`) **based on the parity of the current minute**. It's useful for simulating a "failover" or periodic migration behavior in a distributed environment.
 
 ---
 
-## Funzionalità
+## Features
 
-- Monitora il tempo corrente in minuti.
-- Avvia il container `ealen/echo-server` su:
-  - `node1` se il minuto è pari.
-  - `node2` se il minuto è dispari.
-- Arresta il container attivo sull'altro nodo.
-- Mostra una barra di caricamento durante l'attesa.
+- Monitors the current system time (in minutes)
+- Starts the `ealen/echo-server` container on:
+  - `node1` if the current minute is even
+  - `node2` if the current minute is odd
+- Stops the container running on the opposite node
+- Displays a loading bar while waiting between checks
 
 ---
 
-## Requisiti
+## Requirements
 
 - [Python 3.x](https://www.python.org/)
 - [Vagrant](https://www.vagrantup.com/)
-- [Docker](https://www.docker.com/) installato su entrambi i nodi
-- Due VM configurate in Vagrant chiamate `node1` e `node2`
+- [Docker](https://www.docker.com/) installed on both nodes
+- Two Vagrant-managed VMs named `node1` and `node2`
 
 ---
 
-## Come eseguirlo
+## How to Run
 
-Assicurati di avere le due VM in esecuzione:
+Make sure both VMs are up and running:
 
 ```bash
 vagrant up

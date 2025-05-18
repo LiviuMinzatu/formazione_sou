@@ -1,22 +1,22 @@
-# Script Parametri Bash
+# Bash Parameters Script
 
-Questo script Bash mostra come leggere e gestire **parametri da linea di comando**, verificandone la presenza e stampandone i valori. È utile per comprendere come interagire con gli argomenti in uno script.
-
----
-
-## Cosa fa lo script
-
-1. Stampa il **nome dello script** con e senza percorso (`$0`, `basename $0`)
-2. Verifica e stampa i primi **dieci parametri** (`$1`, `$2`, ..., `${10}`)
-3. Mostra **tutti i parametri ricevuti** con `$*`
-4. Controlla se sono stati passati **almeno 10 parametri**
-   - In caso contrario, stampa un messaggio di avviso
+This Bash script demonstrates how to read and handle **command-line parameters**, checking their presence and printing their values. It's useful for understanding how to interact with arguments in a shell script.
 
 ---
 
-## Esecuzione
+## What the Script Does
 
-Per avviare lo script, passa i parametri direttamente da terminale:
+1. Prints the **script name** with and without the full path (`$0`, `basename $0`)
+2. Checks and prints the first **ten parameters** (`$1`, `$2`, ..., `${10}`)
+3. Displays **all received parameters** using `$*`
+4. Verifies if at least **10 parameters** were passed  
+   - If not, it prints a warning message
+
+---
+
+## How to Run
+
+Run the script by passing parameters directly from the terminal:
 
 ```bash
-bash nome_script.sh arg1 arg2 arg3 ... arg10
+bash script_name.sh arg1 arg2 arg3 ... arg10

@@ -1,24 +1,21 @@
 #!/bin/bash
 
-# Si chiede all'utente di inserire il percorso della cartella sulla quale si vuole lavorare
-read -p "Inserisci il percorso della cartella: " directory
+# Prompt the user to enter the path of the target directory
+read -p "Enter the path of the directory: " directory
 
-# Verifica l'esistenza della directory
+# Check if the provided path exists and is a directory
 if [ ! -d "$directory" ]; then
-  # Se non esiste ritorna un messaggio di errore
-  echo "Errore: la cartella non esiste!"
-  # Termina lo scrpit
+  echo "Error: The specified directory does not exist!"
   exit 1
 fi
 
-# Il comando "find" viene usato per cercare nelle directory e nelle sotto directory
-# -type f per precisare di non applicare sulle directory
-# -size -10k  indichiamo la dimensione dei file
-# -exec cancella ogni file trovato corrispondente
-# {}  viene sostituito con il nome del file trovato
-# \;  viene terminato con -exec
+# Use the 'find' command to locate and delete files smaller than 40 KB
+# -type f     limits the search to regular files (not directories)
+# -size -40k  matches files smaller than 40 kilobytes
+# -exec rm -v deletes each matching file with verbose output
+# {}          is replaced with the current file found
+# \;          terminates the -exec clause
 find "$directory" -type f -size -40k -exec rm -v {} \;
-#Modifico il valore ogni volta 
 
-# Messaggio di output per informare l'utente dello stato finale (l'esito)
-echo "File più piccoli di 10 KB eliminati con successo."
+# Final message to inform the user of successful completion
+echo "Files smaller than 40 KB have been successfully deleted."

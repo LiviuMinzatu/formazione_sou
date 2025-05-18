@@ -1,12 +1,16 @@
-# Cleanup
-# Run as root, of course.
- 
-cd /var/log
-# Ci indirizza nella directory /var/log
-cat /dev/null > messages
-# Il contenuto del file messages viene sostituito con il vuoto (buco nero)
-cat /dev/null > wtmp 
-# Anche qui viene eseguita la stessa cosa
-echo "Log files cleaned up." 
-#Semplice stama a video del messaggio tra virgolette
+#!/bin/bash
 
+# Cleanup Script
+# Must be run as root
+
+cd /var/log
+# Navigate to the /var/log directory
+
+> messages
+# Clear the contents of the 'messages' log file
+
+> wtmp
+# Clear the contents of the 'wtmp' log file
+
+echo "Log files cleaned up."
+# Display a confirmation message

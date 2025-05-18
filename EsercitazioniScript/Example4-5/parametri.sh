@@ -1,50 +1,43 @@
 #!/bin/bash
 
-MINIMOPARAMETRI=10  
- 
-echo #Spazio di una riga
- 
-echo "Il nome dello script è: \"$0\"." #Stampa del nome dello script
+MIN_PARAMETERS=10  # Minimum number of parameters required
 
-echo "Il nome dello script è: \"`basename $0`\"." #Stampa del nome dello script pero senza includere tutto il percorso
- 
-echo #Spazio di una riga
- 
-if [ -n "$1" ]   # Struttura di controllo per capire se il primo parametro è vuoto
-# Quindi viene se $1 non c'è l'if restituira false che in questo caso non è stato dichiarato e non procedera con gli altri parametri
-then
- echo "Parametro #1 è: $1" # Stampa del primo parametro  
+echo  # Print an empty line
+
+echo "The name of the script is: \"$0\"."  # Print the full script name (with path)
+echo "The script's filename is: \"$(basename $0)\"."  # Print only the script's filename
+
+echo  # Print an empty line
+
+# Check and display the first three parameters if they exist
+if [ -n "$1" ]; then
+  echo "Parameter #1 is: $1"
 fi
- 
-if [ -n "$2" ] 
-then
- echo "Parametro #2 è: $2" # Stampa dell'eventuale secondo parametro
+
+if [ -n "$2" ]; then
+  echo "Parameter #2 is: $2"
 fi
- 
-if [ -n "$3" ]
-then
- echo "Parametro #3 è: $3" # Stampa dell'eventuale terzo parametro
+
+if [ -n "$3" ]; then
+  echo "Parameter #3 is: $3"
 fi
- 
-# ... fino alla fine
- 
- 
-if [ -n "${10}" ] # Struttura di controllo per il decimo parametro, racchiso tra parentesi graffe
-# Questo avviene perche dopo il nono parametro i due caratteri 1 e 0 possono essere percepiti come 2 caratteri separati
-then
- echo "Parametro #10 è: ${10}" # Stampa del decimo carattere
+
+# ... and so on
+
+# Check and display the 10th parameter using braces to avoid ambiguity with $1 and 0
+if [ -n "${10}" ]; then
+  echo "Parameter #10 is: ${10}"
 fi
- 
-echo "-----------------------------------" #Stampa della linea
-echo "Elenco di tutti i parametri inseriti:  "$*"" # Stampa tutti i parametri tramite $* (* si intende all, quindi tutti)
- 
-if [ $# -lt "$MINIMOPARAMETRI" ] # Struttura di controllo che controlla se il numero dei parametri passati è minore di 10
-# Nel caso affermativo stampa l' echo 
-then
+
+echo "-----------------------------------"
+echo "List of all parameters: $*"  # Print all parameters using $*
+
+# Check if the number of parameters is less than the required minimum
+if [ $# -lt "$MIN_PARAMETERS" ]; then
   echo
-  echo "Questo richiesta almeno $MINIMOPARAMETRI parametri come argomento!"
-fi 
- 
+  echo "This script requires at least $MIN_PARAMETERS arguments!"
+fi
+
 echo
- 
-exit 0
+
+exit 0  # Exit the script successfully

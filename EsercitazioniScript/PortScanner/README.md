@@ -1,21 +1,21 @@
-# Scansione delle porte TCP
+# TCP Port Scanner
 
-Uno script Bash che esegue una scansione delle porte TCP su una macchina specificata. Il programma verifica se le porte comprese tra un intervallo di numeri sono aperte o chiuse, utilizzando `nc` (netcat) per testare ogni porta.
-
----
-
-## Funzionalità
-
-- Scansiona le porte TCP tra due numeri specificati.
-- Controlla se una porta è aperta su una macchina o host specificato.
-- Utilizza il comando `nc` (netcat) per eseguire la scansione delle porte.
+A Bash script that performs a TCP port scan on a specified machine. It checks whether ports within a given range are open or closed, using `nc` (netcat) to test each one.
 
 ---
 
-## Requisiti
+## Features
 
-- **Bash**: lo script è scritto in Bash, quindi è necessario avere un ambiente Linux/Unix con Bash.
-- **Netcat**: deve essere installato il comando `nc` (netcat). Se non è installato, puoi farlo con:
-  
+- Scans TCP ports between two specified numbers
+- Checks whether a port is open on a given host or IP address
+- Uses the `nc` (netcat) command to perform the port scanning
+
+---
+
+## Requirements
+
+- **Bash**: The script is written in Bash and requires a Unix-like environment
+- **Netcat**: The `nc` command must be installed. If it's not available, install it using:
+
   ```bash
   sudo apt install netcat

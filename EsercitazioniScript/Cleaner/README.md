@@ -1,35 +1,35 @@
 # Cleaner Script
 
-Uno **script Bash** semplice ed efficace per pulire una directory eliminando tutti i file **più piccoli di 10 KB**.
+A **simple and effective Bash script** to clean up a directory by deleting all files **smaller than 10 KB**.
 
 ---
 
-## Descrizione
+## Description
 
-Questo script permette di selezionare una cartella e in automatico, rimuove tutti i file al di sotto della soglia di **10 kilobyte**. È utile per:
+This script allows you to select a folder and automatically removes all files below the **10 kilobyte** threshold. It's useful for:
 
-- Fare pulizia da file inutili
-- Eliminare output temporanei di test
-- Ridurre spazio occupato da file di piccole dimensioni
-
----
-
-## Funzionamento
-
-1. Lo script chiede all’utente di inserire un percorso di directory (PATH).
-2. Verifica che la directory esista effettivamente.
-3. Utilizza il comando `find` per cercare e cancellare tutti i file più piccoli di 10 KB.
-4. Mostra i file eliminati uno per uno.
-5. Alla fine stampa un messaggio di conferma 
+- Cleaning up unnecessary files  
+- Deleting temporary test outputs  
+- Reducing space used by small files
 
 ---
 
-## Esempio di utilizzo
+## How It Works
+
+1. The script prompts the user to enter a directory path (PATH).
+2. It checks whether the directory actually exists.
+3. It uses the `find` command to locate and delete all files smaller than 10 KB.
+4. Each deleted file is displayed individually.
+5. A confirmation message is printed at the end.
+
+---
+
+## Example Usage
 
 ```bash
 $ ./cleanup.sh
-Inserisci il percorso della cartella: /home/utente/Scrivania/progetto
+Enter the path of the directory: /home/user/Desktop/project
 ...
-'eliminato file1.txt'
-'eliminato prova.log'
-File più piccoli di 10 KB eliminati con successo.
+'deleted file1.txt'
+'deleted test.log'
+Files smaller than 10 KB have been successfully deleted.

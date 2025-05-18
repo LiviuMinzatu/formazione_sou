@@ -1,11 +1,11 @@
 #!/bin/bash
- 
-echo hello # Stampa "hello"
-echo $?    # Stampa il codice comando eseguito prima
- 
-lskdf      # Comando non riconosciuto
-echo $?    # Stampa il codice del comando eseguito prima ma che non è stato riconosciuto
- 
-echo # Stampa riga vuota
- 
-exit 113   # Fine script
+
+echo hello  # Prints "hello"
+echo $?     # Prints the exit status of the previous command (should be 0 for success)
+
+lskdf       # Invalid command (not recognized)
+echo $?     # Prints the exit status of the previous command (non-zero for error)
+
+echo        # Prints an empty line
+
+exit 113    # Exit the script with status code 113

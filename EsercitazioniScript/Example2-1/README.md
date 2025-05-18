@@ -1,27 +1,27 @@
 # Log Cleanup Script
 
-Questo semplice script Bash serve per **pulire i file di log** più comuni nel sistema Linux. È un esempio base per esercitarsi con i comandi di shell e la gestione dei file di log.
+This simple Bash script is used to **clean common log files** in a Linux system. It's a basic example for practicing shell commands and log file management.
 
 ---
 
-## Cosa fa lo script
+## What the Script Does
 
-1. Si sposta nella directory `/var/log`
-2. Svuota i contenuti dei file `messages` e `wtmp` (li azzera)
-3. Mostra a schermo il messaggio di conferma `"Log files cleaned up."`
-
----
-
-## Attenzione
-
-- Lo script **deve essere eseguito come `root`**, altrimenti non avrà i permessi per modificare i file di log.
-- Questo script **non elimina i file**, ma ne svuota il contenuto.
+1. Navigates to the `/var/log` directory  
+2. Empties the contents of the `messages` and `wtmp` files (resets them to empty)  
+3. Displays the confirmation message: `"Log files cleaned up."`
 
 ---
 
-## Esecuzione
+## Important Notes
 
-Apri un terminale ed esegui:
+- The script **must be run as `root`**, otherwise it won't have permission to modify the log files.  
+- This script **does not delete the log files**, it only clears their contents.
+
+---
+
+## How to Run
+
+Open a terminal and execute:
 
 ```bash
-sudo bash nome_script.sh
+sudo bash script_name.sh

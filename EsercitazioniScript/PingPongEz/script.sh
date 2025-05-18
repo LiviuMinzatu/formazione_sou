@@ -1,17 +1,17 @@
 #!/bin/bash
 
+# Function to display a visual loading bar
+loading_bar() {
+    duration=${1:-60}        # First argument: duration in seconds (default: 60)
+    bar_length=50            # Length of the loading bar
 
-barra_caricamento() {
-    durata=${1:-60}         # Primo argomento: durata in secondi (default: 60)
-    lunghezza_barra=50      # Lunghezza della barra
+    echo -n "Loading: ["
+    for ((i = 0; i <= duration; i++)); do
+        percent=$((i * 100 / duration))
+        filled=$((i * bar_length / duration))
+        empty=$((bar_length - filled))
 
-    echo -n "Caricamento: ["
-    for ((i=0; i<=durata; i++)); do
-        percent=$((i * 100 / durata))
-        filled=$((i * lunghezza_barra / durata))
-        empty=$((lunghezza_barra - filled))
-
-        printf "\rCaricamento: ["
+        printf "\rLoading: ["
         printf "%0.s#" $(seq 1 $filled)
         printf "%0.s-" $(seq 1 $empty)
         printf "] %3d%%" "$percent"
@@ -19,31 +19,26 @@ barra_caricamento() {
         sleep 1
     done
 
-    echo -e "\nCompletato!"
+    echo -e "\nCompleted!"
 }
 
-
-
+# Infinite loop for container migration
 while true; do
-  echo "== Avvio container su nodo1 =="
-  vagrant ssh nodo1 -c "docker run -d --name echo-server -p 8080:80 ealen/echo-server"
+  echo "== Starting container on node1 =="
+  vagrant ssh node1 -c "docker run -d --name echo-server -p 8080:80 ealen/echo-server"
 
-  echo "== Attesa di 60 secondi =="
-  barra_caricamento 60
+  echo "== Waiting 60 seconds =="
+  loading_bar 60
 
+  echo "== Stopping container on node1 =="
+  vagrant ssh node1 -c "docker stop echo-server && docker rm echo-server"
 
-  echo "== Stop container su nodo1 =="
-  vagrant ssh nodo1 -c "docker stop echo-server && docker rm echo-server"
+  echo "== Starting container on node2 =="
+  vagrant ssh node2 -c "docker run -d --name echo-server -p 8080:80 ealen/echo-server"
 
-  echo "== Avvio container su nodo2 =="
-  vagrant ssh nodo2 -c "docker run -d --name echo-server -p 8080:80 ealen/echo-server"
+  echo "== Waiting 60 seconds =="
+  loading_bar 60
 
-  echo "== Attesa di 60 secondi =="
-  barra_caricamento 60
-
-  echo "== Stop container su nodo2 =="
-  vagrant ssh nodo2 -c "docker stop echo-server && docker rm echo-server"
-
+  echo "== Stopping container on node2 =="
+  vagrant ssh node2 -c "docker stop echo-server && docker rm echo-server"
 done
-
-

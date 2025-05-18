@@ -1,33 +1,33 @@
 # progress-bar2.sh
 
-Uno script Bash che simula una **barra di progresso** durante l'esecuzione di un processo lungo. Utile per fornire feedback visivo all'utente mentre uno script è in attesa.
+A Bash script that simulates a **progress bar** during the execution of a long-running process. Useful for providing visual feedback to the user while a script is waiting.
 
 ---
 
-## Descrizione
+## Description
 
-Questo script:
+This script:
 
-- Mostra una barra di avanzamento usando una sequenza di `.` stampati a intervalli regolari
-- Esegue in background il processo della barra
-- Simula un "processo lungo" tramite `sleep`
-- Interrompe la barra una volta completato il processo
-- Gestisce correttamente l'uscita con `CTRL+C` grazie ai segnali e al trap
-
----
-
-## Funzionamento
-
-1. La barra stampa un punto ogni secondo (`interval=1`)
-2. Il processo "lungo" dura 10 secondi (`long_interval=10`)
-3. Alla fine viene stampato `Finished!`
-4. In caso di interruzione (`CTRL+C`), la barra si ferma in modo ordinato
+- Displays a progress bar using a sequence of `.` printed at regular intervals  
+- Runs the progress bar in the background  
+- Simulates a "long process" using `sleep`  
+- Stops the progress bar once the process is complete  
+- Handles `CTRL+C` interrupts gracefully using signals and `trap`
 
 ---
 
-## Esecuzione
+## How It Works
 
-Assicurati di usare **`bash`** per eseguire lo script (non `sh`):
+1. The progress bar prints one dot per second (`interval=1`)  
+2. The "long process" lasts 10 seconds (`long_interval=10`)  
+3. At the end, it prints `Finished!`  
+4. If interrupted (`CTRL+C`), the bar stops cleanly and exits
+
+---
+
+## How to Run
+
+Make sure to use **`bash`** to run the script (not `sh`):
 
 ```bash
 bash progress-bar2.sh

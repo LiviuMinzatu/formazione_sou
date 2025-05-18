@@ -1,26 +1,24 @@
-# Migrazione periodica di un container Docker su due nodi Vagrant
+# Periodic Docker Container Migration on Two Vagrant Nodes
 
-Questo progetto dimostra come eseguire la **migrazione automatica di un container Docker** tra due macchine virtuali (nodo1 e nodo2) create con **Vagrant**. Il container utilizzato è `ealen/echo-server`, un semplice server HTTP di test.
+This project demonstrates how to perform **automatic migration of a Docker container** between two virtual machines (`node1` and `node2`) created with **Vagrant**. The container used is `ealen/echo-server`, a simple HTTP test server.
 
-## Requisiti
+## Requirements
 
 - [Vagrant](https://www.vagrantup.com/)
 - [VirtualBox](https://www.virtualbox.org/)
-- Bash (ambiente Unix-like)
+- Bash (Unix-like environment)
 
-## Descrizione del funzionamento
+## How It Works
 
-1. Vengono create due VM (nodo1 e nodo2) con Ubuntu 18.04 e Docker preinstallato.
-2. Uno script Bash (`start.sh`) avvia il container `echo-server` su nodo1.
-3. Il container resta attivo per 60 secondi (con barra di caricamento visuale).
-4. Il container viene arrestato e rimosso da nodo1.
-5. Lo stesso container viene avviato su nodo2 per altri 60 secondi.
-6. Il ciclo continua all'infinito, alternando l’esecuzione del container tra i due nodi.
+1. Two VMs (`node1` and `node2`) are created with Ubuntu 18.04 and Docker pre-installed.
+2. A Bash script (`start.sh`) launches the `echo-server` container on `node1`.
+3. The container remains active for 60 seconds, with a visual loading bar.
+4. The container is then stopped and removed from `node1`.
+5. The same container is started on `node2` for another 60 seconds.
+6. The cycle continues indefinitely, alternating the container execution between the two nodes.
 
-## Avvio del progetto
+## How to Start the Project
 
-1. Clona la repository:
+1. Clone the repository:
    ```bash
    git clone https://github.com/liviuminzatu/formazione_sou.git
-   
-

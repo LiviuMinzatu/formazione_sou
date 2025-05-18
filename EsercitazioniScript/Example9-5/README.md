@@ -1,30 +1,30 @@
-# Controllo dei Privilegi Utente in Bash
+# User Privilege Check in Bash
 
-Questa cartella contiene **due script Bash** che permettono di verificare se lo script è eseguito dall'utente root, usando due approcci differenti:
+This folder contains **two Bash scripts** that check whether the script is being run by the root user, using two different approaches:
 
-- Controllo tramite UID (`am-i-root.sh`)
-- Controllo tramite nome utente (`check-root-name.sh`)
+- UID-based check (`am-i-root.sh`)
+- Username-based check (`check-root-name.sh`)
 
 ---
 
-## File contenuti
+## Files Included
 
-- `am-i-root.sh` → Verifica se l'utente è root controllando l'UID.
-- `check-root-name.sh` → Verifica se il nome utente è "root".
+- `am-i-root.sh` → Checks if the user is root by verifying the UID.
+- `check-root-name.sh` → Checks if the username is "root".
 
 ---
 
 ## Script 1 — `am-i-root.sh`
 
-Verifica i privilegi dell'utente controllando l'**UID** del processo in esecuzione.
+Determines user privileges by checking the **UID** of the running process.
 
-### Funzionamento
+### How It Works
 
-- UID `0` → utente root
-- Qualsiasi altro UID → utente normale
+- UID `0` → root user  
+- Any other UID → regular user
 
-### Esecuzione
+### How to Run
 
 ```bash
-bash am-i-root.sh          # Come utente
-sudo bash am-i-root.sh     # Come root
+bash am-i-root.sh          # As a regular user
+sudo bash am-i-root.sh     # As root

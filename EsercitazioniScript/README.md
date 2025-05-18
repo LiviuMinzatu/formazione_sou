@@ -1,16 +1,17 @@
-# Script Python
+# Python Scripts
 
-Questa cartella contiene script Python che svolgono diverse funzioni di sistema, come la gestione di container Docker e la visualizzazione di barre di avanzamento.
+This folder contains Python scripts that perform various system tasks, such as managing Docker containers and displaying progress bars.
 
-## Elenco degli Script
+## Script List
 
-### Script Python
-- **docker-container-switch.py**: Gestisce i container Docker su nodi diversi.
-- **progress-bar-python.py**: Mostra una barra di avanzamento in Python.
+### Python Scripts
+- **docker-container-switch.py**: Manages Docker containers across different nodes.
+- **progress-bar-python.py**: Displays a progress bar in the terminal using Python.
 
-## Come Eseguire gli Script
+## How to Run the Scripts
 
-1. Assicurati di avere Python 3 installato.
-2. Esegui lo script:
+1. Make sure Python 3 is installed.
+2. Run the script using:
+
    ```bash
-   python3 <nome_script>.py
+   python3 <script_name>.py

@@ -1,31 +1,31 @@
-# Script sulle variabili
+# Variables Script
 
-Questo script Bash mostra come utilizzare le **variabili "nude" (non dichiarate esplicitamente con tipo)**, ed è un ottimo esempio per imparare le basi delle variabili in shell scripting.
-
----
-
-## Cosa fa lo script
-
-1. Assegna e stampa il valore di una variabile `a`
-2. Riassegna un nuovo valore a `a` tramite un'espressione aritmetica
-3. Esegue un ciclo `for` stampando più valori della variabile `a` sulla stessa riga
-4. Chiede all'utente un nuovo valore per `a` e lo stampa
+This Bash script demonstrates how to use **"naked" variables** (implicitly typed), and is a great example for learning the basics of variables in shell scripting.
 
 ---
 
-## Dettagli tecnici
+## What the Script Does
 
-- Usa `let` per operazioni aritmetiche
-- Usa `echo -n` per stampare senza andare a capo
-- Utilizza `read` per acquisire input da tastiera
-- Termina con `exit 0` per indicare esecuzione riuscita
+1. Assigns and prints the value of the variable `a`  
+2. Reassigns a new value to `a` using an arithmetic expression  
+3. Executes a `for` loop that prints multiple values of `a` on the same line  
+4. Prompts the user to enter a new value for `a` and prints it
 
 ---
 
-## Esecuzione
+## Technical Details
 
-Nel terminale, rendi eseguibile lo script e avvialo:
+- Uses `let` for arithmetic operations  
+- Uses `echo -n` to print without a newline  
+- Uses `read` to capture keyboard input  
+- Ends with `exit 0` to indicate successful execution
+
+---
+
+## How to Run
+
+In the terminal, make the script executable and run it:
 
 ```bash
-chmod +x nome_script.sh
-./nome_script.sh
+chmod +x script_name.sh
+./script_name.sh

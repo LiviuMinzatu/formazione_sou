@@ -1,32 +1,32 @@
-# Array Associativi in Bash: Rubrica Indirizzi
+# Associative Arrays in Bash: Address Book
 
-Questo script dimostra l'uso degli **array associativi** in Bash tramite una semplice rubrica che associa nomi a indirizzi.
-
----
-
-## Descrizione
-
-Lo script crea un array associativo `address` e assegna ad alcuni nomi i rispettivi indirizzi. Poi:
-
-- Stampa i singoli indirizzi associati ai nomi
-- Mostra tutte le chiavi (i nomi) presenti nella rubrica
+This script demonstrates the use of **associative arrays** in Bash through a simple address book that maps names to addresses.
 
 ---
 
-## Concetti chiave
+## Description
 
-| Concetto                  | Esempio                              |
-|---------------------------|--------------------------------------|
-| Array associativo         | `declare -A nome_array`             |
-| Assegnazione chiave/valore| `array[chiave]="valore"`            |
-| Accesso ai valori         | `${array[chiave]}`                  |
-| Elenco chiavi             | `${!array[*]}`                      |
+The script creates an associative array named `address` and assigns specific addresses to a few names. Then it:
+
+- Prints each individual address associated with the names
+- Displays all the keys (names) stored in the address book
 
 ---
 
-## Esecuzione
+## Key Concepts
 
-Assicurati di usare **Bash 4.0 o superiore**, perché gli array associativi **non sono supportati** da versioni più vecchie.
+| Concept                  | Example                              |
+|--------------------------|--------------------------------------|
+| Associative array        | `declare -A array_name`              |
+| Key/value assignment     | `array[key]="value"`                 |
+| Accessing values         | `${array[key]}`                      |
+| Listing keys             | `${!array[*]}`                       |
+
+---
+
+## How to Run
+
+Make sure you are using **Bash version 4.0 or later**, since associative arrays are **not supported** in older versions.
 
 ```bash
 bash address-book.sh

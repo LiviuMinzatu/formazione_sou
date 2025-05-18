@@ -1,26 +1,29 @@
 # Exit Status Script
 
-Questo semplice script Bash serve per mostrare **il codice di ritorno (exit status)** dei comandi eseguiti. È un ottimo esercizio per capire come Bash gestisce il successo o il fallimento dei comandi.
+This simple Bash script demonstrates how to check the **exit status** of executed commands. It's a great exercise to understand how Bash handles command success and failure.
 
 ---
 
-## Cosa fa lo script
+## What the Script Does
 
-1. Esegue il comando `echo hello`
-   - Stampa `hello`
-   - Mostra il codice di uscita (`$?`), che sarà `0` (successo)
-2. Esegue un comando inesistente (`lskdf`)
-   - Bash mostrerà un errore
-   - Il codice di uscita sarà diverso da `0` (fallimento)
-3. Stampa una riga vuota
-4. Termina lo script con un codice personalizzato: `exit 113`
+1. Executes the command `echo hello`  
+   - Prints `hello`  
+   - Displays the exit status (`$?`), which will be `0` (success)
+
+2. Executes a non-existent command (`lskdf`)  
+   - Bash will return an error  
+   - The exit status will be non-zero (failure)
+
+3. Prints an empty line
+
+4. Ends the script with a custom exit code: `exit 113`
 
 ---
 
-## Esecuzione
+## How to Run
 
-Per eseguire lo script:
+Make the script executable and run it:
 
 ```bash
-chmod +x nome_script.sh
-./nome_script.sh
+chmod +x script_name.sh
+./script_name.sh
