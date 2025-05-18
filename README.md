@@ -1,43 +1,43 @@
-# Formazione SOURCESENSE Academy
+# SOURCESENSE Academy Training
 
-Benvenuto nella mia repository dedicata al mio percorso di formazione con **SOURCESENSE**!
+Welcome to my repository dedicated to my training journey with **SOURCESENSE**!
 
-> Qui raccolgo esercitazioni, progetti e progressi personali nel mondo dello sviluppo e dell’open source.
-
----
-
-## Cosa contiene questa repo?
-
-- **Esercizi pratici**
-- **Script Bash e automazioni**
-- **Progetti di apprendimento**
+> Here I collect exercises, projects, and personal progress in the world of development and open source.
 
 ---
 
-## Tecnologie & strumenti
+## What's in this repo?
 
-Questa repo si basa principalmente su:
-
-- Bash & Shell scripting 
-- Git & GitHub 
-- Linux 
-- VS Code / Editor testuali 
-- Terminale: il nostro miglior amico 
+- **Practical exercises**
+- **Bash scripts and automations**
+- **Learning projects**
 
 ---
 
-## Obiettivi del progetto
+## Technologies & Tools
 
-- Documentare il mio percorso formativo
-- Consolidare le conoscenze acquisite
-- Sperimentare con codice reale
-- Creare una base di riferimento per il futuro
+This repository is mainly based on:
+
+- Bash & Shell scripting  
+- Git & GitHub  
+- Linux  
+- VS Code / Text editors  
+- Terminal: our best friend
 
 ---
 
-## Come utilizzare questa repo
+## Project Goals
 
-1. Clona il repository:
+- Document my training path  
+- Solidify acquired knowledge  
+- Experiment with real code  
+- Build a future reference base
+
+---
+
+## How to Use This Repo
+
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/LiviuMinzatu/formazione_sou.git
